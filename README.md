@@ -12,3 +12,7 @@ code goes here...
 code goes here...  
 /****** (END) core code (END)*********/
 ```
+
+Bug reports at erqitao@qq.com
+Thanks!
+:)
