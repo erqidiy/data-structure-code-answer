@@ -1,3 +1,8 @@
+/* FileName: quickSort.c
+ * Function: quick sort algorithm
+ * Author: erqitao
+ * Date: 2019-12-02
+ * */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
