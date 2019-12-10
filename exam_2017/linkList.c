@@ -27,6 +27,7 @@ linkNode* createLinkList(int size) {
 	return head;
 }
 
+/********************** (START) core code (START) *************************/
 void reverseLinkList(linkNode *head) {
 	linkNode *p, *nextNode;
 	p = head->next;
@@ -39,6 +40,7 @@ void reverseLinkList(linkNode *head) {
 		p = nextNode;
 	}
 }
+/********************** (END) core code (END) *************************/
 
 void printLinkList(linkNode *head) {
 	head = head->next;
