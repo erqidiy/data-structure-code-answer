@@ -39,7 +39,6 @@ void display(linkList head) {
 	putchar('\n');
 }
 
-// **************** (START) core code (START) ***********************
 void insertSort(linkList head) {
 	linkList p, pre, currentNode, nextNode;
 	currentNode = head->next;
@@ -61,16 +60,43 @@ void insertSort(linkList head) {
 		currentNode = nextNode;
 	}
 }
+
+
+// **************** (START) core code (START) ***********************
+void insert(linkList head, int value) {
+    linkNode *p, *pre, *tmp;
+    pre = head;
+    p = head->next;
+
+    while (p != NULL && p->data <= value) {
+        pre = pre->next;
+        p = p->next;
+    }
+
+    tmp = malloc(sizeof(linkNode));
+    tmp->data = value;
+    
+    // insert the new node betweent pre and p, that's [pre, tmp, p]
+    tmp->next = p;
+    pre->next = tmp;
+}
 // **************** (END) core code (END) ***************************
+
 
 int main() {
 	linkList l = createLinkList(ARRAY_SIZE);
+    int value;
 	display(l);
 
 	printf("Sorted...\n");
 
 	insertSort(l);
 	display(l);
+
+    printf("Insert a new value to be inserted into the list: ");
+    scanf("%d", &value);
+    insert(l, value);
+    display(l);
 
 	return 0;
 }
